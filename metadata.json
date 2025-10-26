@@ -1,0 +1,5 @@
+{
+  "name": "Asisten Modul Ajar (AMA)",
+  "description": "Asisten Modul Ajar (AMA) adalah aplikasi web untuk membuat perencanaan pembelajaran (modul ajar) secara otomatis menggunakan AI. Pengguna dapat memasukkan detail mata pelajaran, kelas, materi, dan model pembelajaran untuk menghasilkan modul ajar yang terstruktur, lengkap, dan mengekspornya ke format DOC.",
+  "requestFramePermissions": []
+}
