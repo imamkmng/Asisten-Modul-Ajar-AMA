@@ -31,6 +31,8 @@
       }
     </script>
     <link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cg fill='%230057FF'%3e%3cpath d='M50,15 L5,35 L50,55 L95,35 Z' /%3e%3cpath d='M20,38 L20,60 C20,60 45,75 50,75 C55,75 80,60 80,60 L80,38 L50,53 Z' /%3e%3cpath d='M75 5 L80 15 L85 5 L95 10 L85 15 L80 25 L75 15 L65 10 Z' /%3e%3c/g%3e%3c/svg%3e">
+  <!-- 1. Tambahkan Babel Standalone untuk kompilasi JSX/TSX di browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
@@ -43,8 +45,9 @@
 }
 </script>
 </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-50 font-sans">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- 2. Ubah tipe skrip menjadi text/babel dan arahkan ke index.tsx -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -3,13 +3,10 @@
 import { GoogleGenAI } from "@google/genai";
 import { type FormState } from '../types';
 
-const API_KEY = process.env.API_KEY;
-
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable is not set.");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+// FIX: Per Gemini API guidelines, API key must be from process.env.API_KEY
+// and the client should be initialized with it directly. This also resolves
+// the TypeScript error regarding 'import.meta.env'.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const buildPrompt = (formData: FormState): string => {
   const customCapaian = formData.capaianPembelajaran.trim();
